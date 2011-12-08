@@ -11,7 +11,7 @@ module Capybara
           @localhost     = opts.delete(:localhost)     || get_localhost
           @opts          = opts
           Capybara.server_port = @server_port
-          Capybara.app_host    = "http://#{@localhost}:#{@server_port}"
+          #Capybara.app_host    = "http://#{@localhost}:#{@server_port}"
 
           Capybara.register_driver :selenium do |app|
             driver = if defined?(Capybara::Selenium::Driver)
